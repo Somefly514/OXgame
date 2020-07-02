@@ -6,6 +6,7 @@
 	  classdata.id = number;
 	  return classdata;
 	}
+
 	var turn = 0;
 	var winarray = [["abox", "bbox", "cbox"], ["dbox", "ebox", "fbox"], ["gbox", "hbox", "ibox"], ["abox", "dbox", "gbox"], ["bbox", "ebox", "hbox"], ["cbox", "fbox", "ibox"], ["abox", "ebox", "ibox"], ["cbox", "ebox", "gbox"]];
 	var OXarray = [];
@@ -80,8 +81,8 @@
 	}
 
 	function Xwintable(e) {
-	  var Xtext = createtable("Otext", "div");
-	  var XBT = createtable("OBT", "button");
+	  var Xtext = createtable("Xtext", "div");
+	  var XBT = createtable("XBT", "button");
 	  Xtext.style.display = "flex";
 	  Xtext.style.border = "solid";
 	  Xtext.style.height = "40vh";
@@ -109,13 +110,43 @@
 	  });
 	}
 
+function Dtable(e) {
+	  var Dtext = createtable("Dtext", "div");
+	  var DBT = createtable("DBT", "button");
+	  Dtext.style.display = "flex";
+	  Dtext.style.border = "solid";
+	  Dtext.style.height = "40vh";
+	  Dtext.style.width = "75vh";
+	  Dtext.style.alignItems = "center";
+	  Dtext.style.textAlign = "center";
+	  Dtext.innerText = "平局";
+	  Dtext.style.justifyContent = "center";
+	  DBT.style.display = "flex";
+	  DBT.style.height = "10vh";
+	  DBT.style.width = "30vh";
+	  DBT.style.alignItems = "center";
+	  DBT.style.textAlign = "center";
+	  DBT.style.fontWeight = "bold";
+	  DBT.innerText = "重新開始遊戲";
+	  document.body.appendChild(Dtext);
+	  document.body.appendChild(DBT);
+	  document.body.style.display = "flex";
+	  document.body.style.flexDirection = "column";
+	  document.body.style.alignItems = "center";
+	  DBT.addEventListener('click', function () {
+	    document.body.removeChild(Dtext);
+	    document.body.removeChild(DBT);
+	    starttable();
+	  });
+	}
+
 	function gametable(e) {
 	  console.log("OXgame.js is work");
 	  document.body.style.display = "flex";
 	  document.body.style.flexDirection = "column";
 	  document.body.style.alignItems = "center";
 
-	  function createframe(number, h) {
+	 function createframe(number, h) {
 	    var classname = document.createElement(h);
 	    classname.id = number;
 	    classname.style.borderStyle = "solid";
@@ -123,7 +154,7 @@
 	    classname.style.width = "18vh";
 	    classname.style.textAlign = "center";
 	    classname.style.align = "center";
-	    classname.style.fontSize = "50px";
+	    classname.style.fontSize = "75px";
 	    classname.style.lineHeight = "1.5";
 	    classname.addEventListener("click", function () {
 	      round(classname), wincheck(), tablefull();
@@ -150,7 +181,15 @@
 
 	  function tablefull(e) {
 	    for (var i = 0; i < winarray.length; i++) {
-	      if (OXarray.length == 9) console.log("table is full");
+	      if (OXarray.length == 9)  
+		  {
+	        gameborder.addEventListener("click", function () {
+	          document.body.removeChild(gameborder);
+	          Dtable();
+	        });
+			
+	        cleartable();
+	      };
 	    }
 	  }
 
@@ -169,10 +208,11 @@
 	        gameborder.addEventListener("click", function () {
 	          document.body.removeChild(gameborder);
 	          Xwintable();
-	          cleartable();
 	        });
+			
 	        cleartable();
 	      }
+		  
 	    }
 	  }
 	  /*let word = document.createTextNode("這是一段測試文字");
