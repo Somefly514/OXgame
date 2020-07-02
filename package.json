@@ -1,0 +1,32 @@
+{
+  "name": "oxgame",
+  "version": "1.0.0",
+  "description": "OXgame test file",
+  "main": "index.js",
+  "scripts": {
+    "test": "OXgame is work"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Somefly514/OXgame.git"
+  },
+  "author": "Somefly514",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Somefly514/OXgame/issues"
+  },
+  "homepage": "https://github.com/Somefly514/OXgame#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "eslint": "^7.3.1",
+    "prettier-eslint-cli": "^5.0.0"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "rollup": "^2.18.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "typescript": "^3.9.6"
+  }
+}
