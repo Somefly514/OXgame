@@ -1,9 +1,9 @@
 import babel from 'rollup-plugin-babel';
 
  export default {
- input: 'src/index.js',
+ input: 'src/OXgame.js',
  output: {
- file: 'out/draft.js',
+ file: 'out/OXgame.js',
  format: 'iife',
  sourcemap: 'true',
  },
