@@ -1,10 +1,11 @@
 {
   "name": "oxgame",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "OXgame test file",
   "main": "index.js",
   "scripts": {
-    "test": "OXgame is work"
+    "build": "rollup -c && cp ./out/* ./htdocs/js",
+	"test": "echo \"Error: no test specified\" && exitl"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,9 @@
     "rollup": "^2.18.2",
     "rollup-plugin-babel": "^4.4.0",
     "typescript": "^3.9.6"
-  }
+  },
+  "keywords": [
+    "\"OXgame",
+    "test\""
+  ]
 }
