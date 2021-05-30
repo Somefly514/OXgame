@@ -33,7 +33,7 @@
     "rollup-plugin-babel": "^4.4.0",
     "safe": "^0.4.6",
     "typescript": "^3.9.6",
-    "ws": "^7.3.0"
+    "ws": "^7.4.6"
   },
   "keywords": [
     "\"OXgame",
