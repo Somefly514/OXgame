@@ -28,7 +28,7 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "def": "0.0.8",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "rollup": "^2.18.2",
     "rollup-plugin-babel": "^4.4.0",
     "safe": "^0.4.6",
